@@ -1,0 +1,48 @@
+public class HomeAppliancesStore {
+
+    static String s;
+    public static String getS2() {
+        return s2;
+    }
+
+    public static void setS2(String s2) {
+        HomeAppliancesStore.s2 = s2;
+    }
+
+    public static int getX() {
+        return x;
+    }
+
+    public static void setX(int x) {
+        HomeAppliancesStore.x = x;
+    }
+
+    static String s2;//bazo tis metavlites ths askhshs p.x onoma etairias,dieuthinsi kai ergazomenoi
+    static int x;
+    public static String getS() {
+        return s;
+    }
+
+    public static void setS(String s) {
+        HomeAppliancesStore.s = s;
+    }
+
+
+
+    public static void main(String[] args) {
+        s=args[0];
+        s2=args[1];
+        try{
+            x=Integer.parseInt(args[2]);
+            if(s == null || s2 == null){
+                System.out.println("error, no given company name/address");
+            }else{
+                System.out.println("company name: "+s + "\ncompany address: " + s2 +"\n" + "workers: " + x);
+            }
+        }catch(NumberFormatException e){
+            System.out.println("error, not an integer given");
+        }
+
+
+    }
+}
